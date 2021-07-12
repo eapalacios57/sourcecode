@@ -8,7 +8,7 @@ pipeline {
     }
     environment {
         withCredentials([string(credentialsId: 'UserS3ID', variable: 'UserAWS'), string(credentialsId: 'UserS3ID', variable: 'PassAWS')]) {
-            // some block
+           aws 
         }
         statusCode = '';
     }  
