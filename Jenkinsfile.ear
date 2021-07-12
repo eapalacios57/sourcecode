@@ -38,7 +38,7 @@ pipeline {
                }*/
                echo "SonarQube analysis";             
            
-        }
+        //}
             /*steps {
                 script {
                     echo "Quality gate";
