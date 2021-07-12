@@ -7,9 +7,6 @@ pipeline {
             )
     }
     environment {
-        withCredentials([string(credentialsId: 'UserS3ID', variable: 'UserAWS'), string(credentialsId: 'UserS3ID', variable: 'PassAWS')]) {
-           aws 
-        }
         statusCode = '';
     }  
     stages {
@@ -72,6 +69,9 @@ pipeline {
             when { anyOf { branch 'develop'; branch 'qa'; branch 'stage'; branch 'master' } }
             steps {
                 echo "build Pendiente Definición"
+                withCredentials([string(credentialsId: 'UserS3ID', variable: 'UserAWS'), string(credentialsId: 'UserS3ID', variable: 'PassAWS')]) {
+           aws 
+            }
             }
         }
         }   
