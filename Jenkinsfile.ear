@@ -69,7 +69,7 @@ pipeline {
             when { anyOf { branch 'develop'; branch 'qa'; branch 'stage'; branch 'master' } }
             steps {
                 echo "build Pendiente Definición"
-                aws --version
+                sh aws --version
                 
             }
         }
