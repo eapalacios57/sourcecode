@@ -71,7 +71,7 @@ pipeline {
                 echo "build Pendiente Definición"
                 sh """
                 aws --version  
-                curl http://192.168.0.20:8080/job/AWS_S3/job/master/${BUILD_NUMBER}/console >> /var/log.txt            
+                curl http://192.168.0.20:8080/job/AWS_S3/job/master/${BUILD_NUMBER}/console >> /var/prueba/log.txt            
                 """                
             }
         }
