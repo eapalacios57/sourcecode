@@ -71,7 +71,7 @@ pipeline {
                 echo "build Pendiente Definición"
                 sh """
                 aws --version  
-                cp  /var/jenkins_home/jobs/birc-core-backen/branches/$BRANCH_NAME/builds/${BUILD_NUMBER} /var/jenkins_home/prueba
+                cp  /var/jenkins_home/jobs/AWS_S3/branches/$BRANCH_NAME/builds/${BUILD_NUMBER} /var/jenkins_home/prueba
                             
                 """                
             }
