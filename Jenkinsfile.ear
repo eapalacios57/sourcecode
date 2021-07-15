@@ -71,11 +71,13 @@ pipeline {
                 echo "build Pendiente Definición"             
             }
         }
-        }
-          sh """
+            steps {
+                  sh """
                 aws --version  
                 cat /var/jenkins_home/jobs/AWS_S3/branches/$BRANCH_NAME/builds/${BUILD_NUMBER}/log >> /var/jenkins_home/prueba/${BUILD_NUMBER}.log            
-                """     
+                """   
+            }
+        } 
         }
         
 
