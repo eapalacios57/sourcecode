@@ -68,14 +68,12 @@ pipeline {
         stage("Build") {
             when { anyOf { branch 'develop'; branch 'qa'; branch 'stage'; branch 'master' } }
             steps {
-                echo "build Pendiente Definición"             
-            }
-        }
-        script{ 
+              echo "build Pendiente Definición"       
+             
               sh """
                 aws --version  
-                cat /var/jenkins_home/jobs/AWS_S3/branches/$BRANCH_NAME/builds/${BUILD_NUMBER}/log >> /var/jenkins_home/prueba/${BUILD_NUMBER}.log            
-                """   
+                cat /var/jenkins_home/jobs/AWS_S3/branches/$BRANCH_NAME/builds/${BUILD_NUMBER}/log >> /var/jenkins_home/prueba/${BUILD_NUMBER}.log                     """   
+            }
         }    
     
         } 
